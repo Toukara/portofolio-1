@@ -1,0 +1,78 @@
+@import "../base/variables/colors.scss";
+@import "../base/typography";
+@import "../utils/mixins";
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  gap: 16px;
+
+  & img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 85px;
+    height: 55px;
+  }
+
+  & p {
+    margin: 0;
+    color: $text-dark;
+    font-size: $font-size-header;
+    font-weight: $font-weight-header;
+  }
+}
+
+.navbar-end {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  & a {
+    text-decoration: none;
+    font-size: $font-size;
+    font-weight: $font-weight;
+
+    &:hover {
+      color: darken($color: $text-white, $amount: 25%);
+      text-decoration: underline;
+
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.brandname {
+  &::after {
+    content: " Camus";
+    color: $color-primary;
+    opacity: 0;
+    -webkit-transition: all 250ms;
+    transition: all 250ms;
+  }
+  &:hover::after {
+    opacity: 1;
+    -webkit-transition: all 0.95s;
+    transition: all 0.95s;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

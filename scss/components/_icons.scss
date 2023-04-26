@@ -1,0 +1,27 @@
+@import "../base/variables/colors";
+
+i {
+  color: $text-dark;
+  font-size: 2.5rem;
+}
+
+.skills-showcase-item-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 5%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  background-color: $white;
+
+  & > svg {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+path {
+  fill: $gray;
+}

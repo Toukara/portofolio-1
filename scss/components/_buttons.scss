@@ -1,0 +1,60 @@
+@import "../base/variables/colors.scss";
+@import "../base/typography";
+
+@mixin button {
+  line-height: 1.5;
+  cursor: pointer;
+  border: 1px solid $color-tertiary;
+}
+
+.btn {
+  @include button;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: $color-primary;
+  color: $text-white;
+
+  &:hover {
+    background-color: $color-primary-dark;
+    color: $text-dark;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.btn-secondary {
+  background-color: $color-secondary;
+  color: $text-white;
+
+  &:hover {
+    background-color: $color-secondary-dark;
+    color: $text-dark;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.btn-tertiary {
+  background-color: $color-tertiary;
+  color: $text-white;
+
+  &:hover {
+    background-color: $color-tertiary-dark;
+    color: $text-dark;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.btn-link {
+  background-color: $is-link;
+  color: $text-white;
+  font-weight: 700;
+
+  &:hover {
+    background-color: darken($is-link, 10%);
+    transition: all 0.2s ease-in-out;
+  }
+}
